@@ -246,3 +246,18 @@
 	  then modify the startup.cs and then try to run it and then it shows me error then I solve it 
 	  Correct any default reference to ErrorViewModel to the new .Models.ViewModels.ErrorViewModels
 	  Run the application and it runs smoothly
+
+
+	  4:45
+	  Add SD.cs in .Utility
+	  Add a ‘Customers’ area to
+	  Areas - Change the routes in Startup.cs like the one outlined in the ScaffoldingReadMe.txt
+	  Then Move the HomeController.cs to the Area > Customer > Controller folder and delete Data and Models.
+	  Edit the HomeController.cs to explicitly define that the controller is in the Customer Area
+	  Move Views > Home and modify the HomeController namespace
+      Views are now in Areas, but master page is defined in _ViewStart
+	  Then Copy _ViewImport and _ViewStart to Customer Area Modify the _ViewStart.cshtml to reflect the new path.
+	  Add a new Admin area in Areas
+	  Then Add the proper view files and delete the Data and Models folder
+	  then Delete the Controllers folder
+	  Then update it on Github
