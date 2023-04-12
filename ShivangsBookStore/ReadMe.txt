@@ -261,3 +261,6 @@
 	  Then Add the proper view files and delete the Data and Models folder
 	  then Delete the Controllers folder
 	  Then update it on Github
+
+	  4:48
+	  Add a ReadMe.md
