@@ -230,4 +230,19 @@
 	  2:50
 	  Completed the bootsrtap and then push it on github
 
-
+	  3:10
+	  Create 3 new projects in class library by right clicking on Solution
+	  ShivangBookStore.DataAccess, ShivangBookStore.Models, ShivangBookStore.Utility
+	  Copy the data folder and paste it to the .DataAccess
+	  Then install the Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages
+	  Then delete migrations folder
+	  Install nuget package
+	  then modify the namespace
+	  Delete the Class1.cs files
+	  Then build the project and it shows me few error
+	  Move models to .models
+	  then add project referencen to DataAccess and Models
+	  Rename the Model folder to ViewModels after then change the namespace 
+	  then modify the startup.cs and then try to run it and then it shows me error then I solve it 
+	  Correct any default reference to ErrorViewModel to the new .Models.ViewModels.ErrorViewModels
+	  Run the application and it runs smoothly
