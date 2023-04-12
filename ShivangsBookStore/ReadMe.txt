@@ -264,3 +264,28 @@
 
 	  4:48
 	  Add a ReadMe.md
+
+	  4:50
+	  To prepare for the next part, ‘build’ the application and confirm there are no errors
+	  Review appsettings.json - Create the migrations (using code-first, where changes are “pushed” to the database), modify the database name and save.
+	  Use the NuGet Package Manager Console to add the migration (with a meaningful name).
+	  Note what happens if the wrong default project is selected.
+	  Change to the correct default project (.DataAccess) and run again.
+	  Migration Stamp- 2023412215944
+	  Connection string to the localdb that is automatically selected
+	  Review the file for the SQLlike syntax, statements, columns and primary key constraints.
+	  Note tables related the ASP.NET Identity.
+	  Once the migration is complete, the database needs to be updated.
+	  In the PM console, update the database now.
+	  Review the updated database in the SQL Server Object Explorer.
+	  Check for errors, run the application
+	  Add a new table to the DB by creating a Category model and push it to the DB
+	  Add a new class file to the .Models project and modify
+	  Add the migration via the PM Console
+	  The new migration file will be empty because it hasn’t been added to the Application DB Context
+	  Update this and note the added using statement
+	  Re-run the add-migration and review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
+	  Update the database, confirm the new Categories table via the SQL SOE and
+ 
+	  5:30
+	  Update it on github
