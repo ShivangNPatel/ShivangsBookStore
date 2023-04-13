@@ -289,3 +289,39 @@
  
 	  5:30
 	  Update it on github
+
+
+	  6:00
+	  After creating the Category.cs and adding it to the ApplicationDbContext it’s time to implement the Repository, a generic way of accessing common
+	  functionality (e.g. getting a record), in the .DataAccess project.
+	  Add a new folder name it ‘Repository’ (for class implementations of interfaces) and add an IRepository (for the interfaces) folder inside it.
+	  Add a new item of type interface to the folder and name it IRepository.cs
+	  Modify so it can be used on the Category class to do all the CRUD operations (note using statements).
+	  Create Crude files
+	  Create individual repos for category and all potential models to be added in the future
+	  CategoryRepository.cs
+	  ICategoryRepository.cs
+	  Modify CategoryRepository (note the using statements and the message for formal parameters – review in Repository.cs the method pointing to the
+	  ApplicationDBContext)
+	  Modify ICategoryRepository interface
+	  Review and modify the error now in CategoryRepository.cs (implement the interface to update)
+	  Complete the remaining modifications (note the comments)
+      Build, fix any error and push commits to GitHub
+	  Implement a stored procedure repository and map multiple repositories in a Unit of Work
+	  Add a new interface in the IRepository folder -
+	  ISP_Call.cs – that extends
+	  IDisposable
+	  Include the methods shown (note the comments) and install the NuGet package for Dapper
+	  Now implement this with a new class in the Repository folder.
+	  Add a new class (SP_Call.cs) in the Repository folder, select the appropriate using statement and implement the ISP_Call interface
+	  Add a connection to the database, note the additional using statements
+	  Update the implementation of the ISP_Call interface
+	  Now add the wrapper for Unit of Work
+	  Add a new interface (IUnitOfWork) to the IRepository folder and update the code.
+	  Now implement this inside the UnitOfWork (Hint: Add a class)
+	  Modify the code (make sure the public class implements the interface - UnitOfWork : IUnitOfWork)
+	  To make it accessible by the project, register it Startup.cs in the ConfigureServices method (don’t forget the using statements)
+
+	  12:40
+	  Build and correct any errors,
+	  At last commit it on github
