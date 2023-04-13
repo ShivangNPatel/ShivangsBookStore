@@ -325,3 +325,43 @@
 	  12:40
 	  Build and correct any errors,
 	  At last commit it on github
+
+
+	  12:50
+	  With the addition of UnitOfWork in Startup.cs, it will be accessible with DI by any Controller.
+	  Close all currently opened tabs.
+	  Add a new MVC Controller - Empty inside Areas/Admin
+	  Name it CategoryController.cs
+	  Modify the code to use the IUnitOfWork from the .DataAccess project and the IRepository folder (Hint: using statement)
+	  Add a new folder in the Areas/View with the same name as the Controller
+	  Add a new ‘Index’ view to the folder (note the template) and modify with the generic HTML code from the Category Index View.txt file found in the Assignment 2 - Files folder
+	  Save and run the application and it runs smoothly
+	  In _Layout.cshtml, move the ‘Category’ link to the Content Management drop-down (note the code changes).
+	  Review the changes to the navigation
+	  Modify the Index.cshtml to add the icons in the Category section from Font Awesome and confirm
+	  Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder (note the ‘div’ is now in the return portion of the category.js file
+	  In Index.cshtml add the @section call to the category.js script and run the project.
+	  Time to apply the code to activate the ‘Edit’ and ‘Delete’ buttons and ‘Create New Category’ using the Upsert action
+	  Add the IAction result to the controller and add a View (as we did w/ Index)
+	  Copy and add the html from the Category Upsert View.txt
+	  Create a partial view for the
+	  In the general Views > Shared folder, add the partial view for _CreateAndBackToListButton.cshtml and add the asp-action
+	  Create another parital view for _EditAndBackToListButton and note the code addition of the @model razor statement Add category
+	  Modify the Upsert.cshtml (note the @model statement)
+	  Add the asp-action to the Index.cshtml page and run the application
+	  Navigate to Category > Create New Category
+	  Modify Upsert.cshtml so TITLE now uses the @title variable and refresh the application.
+	  Add the @section call to Scripts to validate input (or lack of) on the client-side and test.
+
+	  1:25
+	  Now create an Upsert POST action method in the CategoryController.cs
+	  Note the Save method is not available, now add the void Save() method to the IUnitOfWork interface (this will now allow the Savemethod to be added).
+	  Remove the _db.SaveChanges() method in the CategoryRepository.cs and move the _unitOfWork.Save() method with the return RedirectToaction method.
+	  Check for errors and test whether the application can update and create a category.
+	  Add the API (Application Programming Interface) call for HTTPDelete in the CategoryController.cs
+	  Then implement the HTTPDelete with a delete method in category.js to add functionality to the application and call the API
+	  Add the delete functionality in category.js with including the onclick event to the Delete function
+	  Add the Delete(url) function code (see next slide).
+
+	  1:55
+	  Commit it on github
