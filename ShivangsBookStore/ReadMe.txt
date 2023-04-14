@@ -368,12 +368,29 @@
 
 
 	  14-4-2023
-	  9:40
+	  8:40
 	  I create a cover type crude.
 	  First I add CoverType.cs in Model folder and then create ID and Name in Model.
 	  After then I add CoverType class to Repository And then add ICoverTypeRepository interface.
 	  Add CoverType to UnitOfWork and IUnitOfWork and then Push CoverTpye to Database.
 
-	  10:15
+	  9:15
 	  I create Product Model and then migrate it.
 	  After then I create repository of it.
+
+	  9:45
+	  Add Product Controller to the Areas > Admin > Controllers to perform the CRUD operations
+	  Add the IWebHostEvironment call and its using statement to the Microsoft.AspNetCore.
+	  Create a ViewModel in the Models project to hold the Product object and select list for Category and CoverType
+	  after then modify the ProductVM class so it is public and intall the Microsoft.AspNetCore. Mvc.ViewFeatures package.
+	  then Modify the ProductController so the IActionResult Upsert calls to the ProductVM view model, include the using statements to the ViewModels folder and Microsoft.AspNetCore.
+	  Comment out the Upsert post method for now
+	  Modify the API call to include the Category and CoverType properites
+	  After add an Index view
+	  Then Copy the Index.cshtml code from Views/Category and modify to the Product List header, Create New Product and add the following properties – Title / ISBN / Price / Author / Category and reference a new product.js file.
+	  Copy/Paste the category.js and rename to product.js (then modify the URL to point to Product)
+	  Modify the _Layout.cshtml to add new link to Product.
+	  Run the application.
+	  Commit it on github.
+
+	  
