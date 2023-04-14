@@ -354,7 +354,7 @@
 	  Add the @section call to Scripts to validate input (or lack of) on the client-side and test.
 
 	  1:25
-	  Now create an Upsert POST action method in the CategoryController.cs
+	  Now I create an Upsert POST action method in the CategoryController.cs
 	  Note the Save method is not available, now add the void Save() method to the IUnitOfWork interface (this will now allow the Savemethod to be added).
 	  Remove the _db.SaveChanges() method in the CategoryRepository.cs and move the _unitOfWork.Save() method with the return RedirectToaction method.
 	  Check for errors and test whether the application can update and create a category.
@@ -365,3 +365,15 @@
 
 	  1:55
 	  Commit it on github
+
+
+	  14-4-2023
+	  9:40
+	  I create a cover type crude.
+	  First I add CoverType.cs in Model folder and then create ID and Name in Model.
+	  After then I add CoverType class to Repository And then add ICoverTypeRepository interface.
+	  Add CoverType to UnitOfWork and IUnitOfWork and then Push CoverTpye to Database.
+
+	  10:15
+	  I create Product Model and then migrate it.
+	  After then I create repository of it.
