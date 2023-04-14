@@ -267,8 +267,8 @@
 
 	  4:50
 	  To prepare for the next part, ‘build’ the application and confirm there are no errors
-	  Review appsettings.json - Create the migrations (using code-first, where changes are “pushed” to the database), modify the database name and save.
-	  Use the NuGet Package Manager Console to add the migration (with a meaningful name).
+	  Review appsettings.json - Create the migrations using code-first, where changes are “pushed” to the database, modify the database name and save.
+	  Use the NuGet Package Manager Console to add the migration with a meaningful name.
 	  Note what happens if the wrong default project is selected.
 	  Change to the correct default project (.DataAccess) and run again.
 	  Migration Stamp- 2023412215944
@@ -284,7 +284,7 @@
 	  Add the migration via the PM Console
 	  The new migration file will be empty because it hasn’t been added to the Application DB Context
 	  Update this and note the added using statement
-	  Re-run the add-migration and review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
+	  Re-run the add-migration and review the changes to the AddCategoryToDb resolve the duplication error that will occur.
 	  Update the database, confirm the new Categories table via the SQL SOE and
  
 	  5:30
@@ -294,18 +294,17 @@
 	  6:00
 	  After creating the Category.cs and adding it to the ApplicationDbContext it’s time to implement the Repository, a generic way of accessing common
 	  functionality (e.g. getting a record), in the .DataAccess project.
-	  Add a new folder name it ‘Repository’ (for class implementations of interfaces) and add an IRepository (for the interfaces) folder inside it.
+	  Add a new folder name it ‘Repository’ and add an IRepository folder inside it.
 	  Add a new item of type interface to the folder and name it IRepository.cs
-	  Modify so it can be used on the Category class to do all the CRUD operations (note using statements).
+	  Modify so it can be used on the Category class to do all the CRUD operations
 	  Create Crude files
 	  Create individual repos for category and all potential models to be added in the future
 	  CategoryRepository.cs
 	  ICategoryRepository.cs
-	  Modify CategoryRepository (note the using statements and the message for formal parameters – review in Repository.cs the method pointing to the
-	  ApplicationDBContext)
+	  Modify CategoryRepository 
 	  Modify ICategoryRepository interface
-	  Review and modify the error now in CategoryRepository.cs (implement the interface to update)
-	  Complete the remaining modifications (note the comments)
+	  Review and modify the error now in CategoryRepository.cs
+	  Complete the remaining modifications 
       Build, fix any error and push commits to GitHub
 	  Implement a stored procedure repository and map multiple repositories in a Unit of Work
 	  Add a new interface in the IRepository folder -
@@ -318,9 +317,9 @@
 	  Update the implementation of the ISP_Call interface
 	  Now add the wrapper for Unit of Work
 	  Add a new interface (IUnitOfWork) to the IRepository folder and update the code.
-	  Now implement this inside the UnitOfWork (Hint: Add a class)
-	  Modify the code (make sure the public class implements the interface - UnitOfWork : IUnitOfWork)
-	  To make it accessible by the project, register it Startup.cs in the ConfigureServices method (don’t forget the using statements)
+	  Now implement this inside the UnitOfWork
+	  Modify the code 
+	  To make it accessible by the project, register it Startup.cs in the ConfigureServices method 
 
 	  12:40
 	  Build and correct any errors,
@@ -332,36 +331,36 @@
 	  Close all currently opened tabs.
 	  Add a new MVC Controller - Empty inside Areas/Admin
 	  Name it CategoryController.cs
-	  Modify the code to use the IUnitOfWork from the .DataAccess project and the IRepository folder (Hint: using statement)
+	  Modify the code to use the IUnitOfWork from the .DataAccess project and the IRepository folder 
 	  Add a new folder in the Areas/View with the same name as the Controller
 	  Add a new ‘Index’ view to the folder (note the template) and modify with the generic HTML code from the Category Index View.txt file found in the Assignment 2 - Files folder
 	  Save and run the application and it runs smoothly
-	  In _Layout.cshtml, move the ‘Category’ link to the Content Management drop-down (note the code changes).
+	  In _Layout.cshtml, move the ‘Category’ link to the Content Management drop-down.
 	  Review the changes to the navigation
 	  Modify the Index.cshtml to add the icons in the Category section from Font Awesome and confirm
-	  Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder (note the ‘div’ is now in the return portion of the category.js file
+	  Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder the ‘div’ is now in the return portion of the category.js file
 	  In Index.cshtml add the @section call to the category.js script and run the project.
 	  Time to apply the code to activate the ‘Edit’ and ‘Delete’ buttons and ‘Create New Category’ using the Upsert action
-	  Add the IAction result to the controller and add a View (as we did w/ Index)
+	  Add the IAction result to the controller and add a View 
 	  Copy and add the html from the Category Upsert View.txt
 	  Create a partial view for the
 	  In the general Views > Shared folder, add the partial view for _CreateAndBackToListButton.cshtml and add the asp-action
 	  Create another parital view for _EditAndBackToListButton and note the code addition of the @model razor statement Add category
-	  Modify the Upsert.cshtml (note the @model statement)
+	  Modify the Upsert.cshtml 
 	  Add the asp-action to the Index.cshtml page and run the application
 	  Navigate to Category > Create New Category
 	  Modify Upsert.cshtml so TITLE now uses the @title variable and refresh the application.
-	  Add the @section call to Scripts to validate input (or lack of) on the client-side and test.
+	  Add the @section call to Scripts to validate input on the client-side and test.
 
 	  1:25
 	  Now I create an Upsert POST action method in the CategoryController.cs
-	  Note the Save method is not available, now add the void Save() method to the IUnitOfWork interface (this will now allow the Savemethod to be added).
+	  Note the Save method is not available, now add the void Save() method to the IUnitOfWork interface .
 	  Remove the _db.SaveChanges() method in the CategoryRepository.cs and move the _unitOfWork.Save() method with the return RedirectToaction method.
 	  Check for errors and test whether the application can update and create a category.
-	  Add the API (Application Programming Interface) call for HTTPDelete in the CategoryController.cs
+	  Add the API call for HTTPDelete in the CategoryController.cs
 	  Then implement the HTTPDelete with a delete method in category.js to add functionality to the application and call the API
 	  Add the delete functionality in category.js with including the onclick event to the Delete function
-	  Add the Delete(url) function code (see next slide).
+	  Add the Delete function code 
 
 	  1:55
 	  Commit it on github
@@ -388,7 +387,7 @@
 	  Modify the API call to include the Category and CoverType properites
 	  After add an Index view
 	  Then Copy the Index.cshtml code from Views/Category and modify to the Product List header, Create New Product and add the following properties – Title / ISBN / Price / Author / Category and reference a new product.js file.
-	  Copy/Paste the category.js and rename to product.js (then modify the URL to point to Product)
+	  Copy/Paste the category.js and rename to product.js then modify the URL to point to Product
 	  Modify the _Layout.cshtml to add new link to Product.
 	  Run the application.
 	  Commit it on github.
