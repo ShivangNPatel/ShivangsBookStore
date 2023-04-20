@@ -393,3 +393,8 @@
 	  Commit it on github.
 
 	  
+	  19-4-2003
+	  11:50
+	  Fixed some errors in migrations. 
+	  Then updated product controllers and made a view for it.
+	  Commit it on github

@@ -1,4 +1,5 @@
-﻿using ShivangsBooks.Models;
+﻿using ShivangsBooks.DataAccess.Repository.IRepository;
+using ShivangsBooks.Models;
 using ShivangsBookStore.DataAccess.Data;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace ShivangsBooks.DataAccess.Repository
 {
-    public class ProductRepository : Repository<Product>
+    public class ProductRepository : Repository<Product>, IProductRepository
     {
         private readonly ApplicationDbContext _db;
         public ProductRepository(ApplicationDbContext db) : base(db)
