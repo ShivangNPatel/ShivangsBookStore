@@ -259,7 +259,7 @@
 	  Then Copy _ViewImport and _ViewStart to Customer Area Modify the _ViewStart.cshtml to reflect the new path.
 	  Add a new Admin area in Areas
 	  Then Add the proper view files and delete the Data and Models folder
-	  then Delete the Controllers folder
+	  Then Delete the Controllers folder
 	  Then update it on Github
 
 	  4:48
@@ -278,7 +278,7 @@
 	  Once the migration is complete, the database needs to be updated.
 	  In the PM console, update the database now.
 	  Review the updated database in the SQL Server Object Explorer.
-	  Check for errors, run the application
+	  Check for errors, then run the application
 	  Add a new table to the DB by creating a Category model and push it to the DB
 	  Add a new class file to the .Models project and modify
 	  Add the migration via the PM Console
@@ -298,25 +298,20 @@
 	  Add a new item of type interface to the folder and name it IRepository.cs
 	  Modify so it can be used on the Category class to do all the CRUD operations
 	  Create Crude files
-	  Create individual repos for category and all potential models to be added in the future
-	  CategoryRepository.cs
-	  ICategoryRepository.cs
-	  Modify CategoryRepository 
-	  Modify ICategoryRepository interface
+	  Create individual repos for category and all potential models to be added CategoryRepository.cs, ICategoryRepository.cs
+	  Modify both CategoryRepository and ICategoryRepository interface
 	  Review and modify the error now in CategoryRepository.cs
 	  Complete the remaining modifications 
       Build, fix any error and push commits to GitHub
 	  Implement a stored procedure repository and map multiple repositories in a Unit of Work
-	  Add a new interface in the IRepository folder -
-	  ISP_Call.cs – that extends
-	  IDisposable
-	  Include the methods shown (note the comments) and install the NuGet package for Dapper
+	  Add a new interface in the IRepository folder 
+	  Include the methods shown and install the NuGet package for Dapper
 	  Now implement this with a new class in the Repository folder.
-	  Add a new class (SP_Call.cs) in the Repository folder, select the appropriate using statement and implement the ISP_Call interface
+	  Add a new class SP_Call.cs in the Repository folder, select the appropriate using statement and implement the ISP_Call interface
 	  Add a connection to the database, note the additional using statements
 	  Update the implementation of the ISP_Call interface
 	  Now add the wrapper for Unit of Work
-	  Add a new interface (IUnitOfWork) to the IRepository folder and update the code.
+	  Add a new interface IUnitOfWork to the IRepository folder and update the code.
 	  Now implement this inside the UnitOfWork
 	  Modify the code 
 	  To make it accessible by the project, register it Startup.cs in the ConfigureServices method 
@@ -333,12 +328,12 @@
 	  Name it CategoryController.cs
 	  Modify the code to use the IUnitOfWork from the .DataAccess project and the IRepository folder 
 	  Add a new folder in the Areas/View with the same name as the Controller
-	  Add a new ‘Index’ view to the folder (note the template) and modify with the generic HTML code from the Category Index View.txt file found in the Assignment 2 - Files folder
+	  Add a new Index view to the folder and modify with the generic HTML code from the Category Index View.txt
 	  Save and run the application and it runs smoothly
 	  In _Layout.cshtml, move the ‘Category’ link to the Content Management drop-down.
 	  Review the changes to the navigation
 	  Modify the Index.cshtml to add the icons in the Category section from Font Awesome and confirm
-	  Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder the ‘div’ is now in the return portion of the category.js file
+	  Delete it and add the JavaScript in to the wwwroot/js folder the ‘div’ is now in the return portion of the category.js file
 	  In Index.cshtml add the @section call to the category.js script and run the project.
 	  Time to apply the code to activate the ‘Edit’ and ‘Delete’ buttons and ‘Create New Category’ using the Upsert action
 	  Add the IAction result to the controller and add a View 
@@ -385,7 +380,7 @@
 	  then Modify the ProductController so the IActionResult Upsert calls to the ProductVM view model, include the using statements to the ViewModels folder and Microsoft.AspNetCore.
 	  Comment out the Upsert post method for now
 	  Modify the API call to include the Category and CoverType properites
-	  After add an Index view
+	  After that add an Index view
 	  Then Copy the Index.cshtml code from Views/Category and modify to the Product List header, Create New Product and add the following properties – Title / ISBN / Price / Author / Category and reference a new product.js file.
 	  Copy/Paste the category.js and rename to product.js then modify the URL to point to Product
 	  Modify the _Layout.cshtml to add new link to Product.
@@ -396,5 +391,14 @@
 	  19-4-2003
 	  11:50
 	  Fixed some errors in migrations. 
-	  Then updated product controllers and made a view for it.
+	  Create an Upsert.cs for Products and modify in Areas > Admin > Views > Product
+	  Add a rich textbox to the textarea inside Product with tiny.cloud using the API key which was provided by you, initialize and add a function to validate input and if empty, display a Sweet
+	  Run the application
+	  In the ProductController configure the Product Upsert Post action method.
+	  Uncomment the method and modify
+	  Runs the application and test, and it works perfectly. Except the edit in coverType and Category. But Edit works in product.
 	  Commit it on github
+
+	  5:30
+	  Add a new folder and subfolder in wwwroot > images
+	  Then commit it on github
