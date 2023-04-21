@@ -371,8 +371,7 @@
 	  9:15
 	  I create Product Model and then migrate it.
 	  After then I create repository of it.
-
-	  9:45
+	  20230414033434- migration stamp
 	  Add Product Controller to the Areas > Admin > Controllers to perform the CRUD operations
 	  Add the IWebHostEvironment call and its using statement to the Microsoft.AspNetCore.
 	  Create a ViewModel in the Models project to hold the Product object and select list for Category and CoverType
@@ -407,3 +406,7 @@
 	  11:00
 	  Make some changes in home page
 	  Then update it on github
+
+	  21-4-23
+	  Make proper home page but still got errors. And I dont have time to solve it because the time for submission is getting over.
+	  Commit it on github

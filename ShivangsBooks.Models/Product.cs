@@ -17,6 +17,14 @@ namespace ShivangsBooks.Models
         [Required]
         [Range(1, 10000)]
         public double ListPrice { get; set; }
+
+        public string price
+        {
+            get
+            {
+                return ListPrice.ToString();
+            }
+        }
         public string ImageUrl { get; set; }
         [Required]
         public int CategoryId { get; set; } // foreign key reference
