@@ -66,7 +66,7 @@ namespace ShivangsBookStore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{area=Admin}/{controller=Product}/{action=Index}/{id?}"); //  this is default route pattern whuich is likely going to be change
+                    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}"); //  this is default route pattern whuich is likely going to be change
                 endpoints.MapRazorPages();
             });
         }

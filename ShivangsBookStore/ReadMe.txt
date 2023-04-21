@@ -402,3 +402,8 @@
 	  5:30
 	  Add a new folder and subfolder in wwwroot > images
 	  Then commit it on github
+
+	  20-4-23
+	  11:00
+	  Make some changes in home page
+	  Then update it on github
